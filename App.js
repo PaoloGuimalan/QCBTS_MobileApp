@@ -26,7 +26,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import MainMap from './main/maincomponents/MainMap';
+import MainMap from './src/components/maincomponents/MainMap';
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -63,7 +63,7 @@ const App: () => Node = () => {
 
   return (
     <SafeAreaView style={backgroundStyle}>
-      <StatusBar backgroundColor="white" barStyle="dark-content" />
+      <StatusBar hidden={true} backgroundColor="white" barStyle="dark-content" />
       <MainMap />
     </SafeAreaView>
   );
